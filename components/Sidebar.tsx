@@ -7,7 +7,7 @@ import {
   Wallet, Megaphone, Briefcase, ShoppingBag, PiggyBank, Coins, FileText
 } from 'lucide-react';
 
-type NavItem = {
+export type NavItem = {
   href: string;
   label: string;
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;

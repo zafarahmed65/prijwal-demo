@@ -4,6 +4,7 @@ import { Clock, CalendarRange, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
 export default function DashboardHeader() {
+  // keep local state without unused setter warnings
   const [scenario] = useState('Base Case');
   const [granularity] = useState<'Monthly' | 'Quarterly' | 'Yearly'>('Quarterly');
 
