@@ -7,8 +7,13 @@ import {
   Wallet, Megaphone, Briefcase, ShoppingBag, PiggyBank, Coins, FileText
 } from 'lucide-react';
 
-// Mirrors workbook tabs
-const SECTIONS = [
+type NavItem = {
+  href: string;
+  label: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+};
+
+const SECTIONS: { title: string; items: NavItem[] }[] = [
   {
     title: 'MAIN',
     items: [{ href: '/feaso-summary', label: 'FEASO SUMMARY', icon: LayoutDashboard }],
@@ -35,7 +40,7 @@ const SECTIONS = [
   },
 ];
 
-function Section({ title, items }: { title: string; items: any[] }) {
+function Section({ title, items }: { title: string; items: NavItem[] }) {
   const pathname = usePathname();
   return (
     <div>
